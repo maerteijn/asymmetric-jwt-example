@@ -16,6 +16,9 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.11"
+flask = "~2.3"
+PyJWT = "~2.6"
+cryptography = "~40"
 
 [tool.poetry.dev-dependencies]
 flake8 = "~6"
