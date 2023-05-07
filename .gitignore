@@ -1,0 +1,16 @@
+# Code
+.idea/
+.vscode/
+
+# OSX
+.DS_Store
+
+# Python
+__pycache__/
+*.egg-info/
+*.pyc
+.coverage*
+
+# Project
+.env
+.envrc

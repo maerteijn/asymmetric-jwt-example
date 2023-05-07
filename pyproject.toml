@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "asymmetric-jwt-example"
+version = "0.0.1"
+description = "A demo project for the blogpost Asymmetric JWT for M2M authorization"
+authors = ["Martijn Jacobs <maerteijn@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/maerteijn/asymmetric-jwt-example"
+classifiers = [
+    "License :: MIT",
+    "Programming Language :: Python :: 3.11",
+]
+packages = [
+    { include = "asymmetric_jwt_example", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+flake8 = "~6"
+flake8-black = "^0.3.6"
+flake8-isort =  "~6"
+isort = "~5.12"
+black = "~23"
+pytest = "~7"
+pytest-cov = "~4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 88
+multi_line_output = 3
+use_parentheses = true
+
+[tool.pytest.ini_options]
+testpaths = "tests/"
+
+[tool.coverage.run]
+omit = ["**/tests/**"]
+
+[tool.coverage.report]
+show_missing = true
